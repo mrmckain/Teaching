@@ -1,0 +1,304 @@
+    1  clear
+    2  mkdir bin
+    3  ls -lrth
+    4  cd bin
+    5  wget https://github.com/ncbi/sratoolkit/archive/v2.3.5-2.tar.gz
+    6  ls
+    7  wget ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR402/SRR402443/SRR402443.sra
+    8  clear
+    9  gunzip v2.3.5-2.tar.gz 
+   10  ls -lrth
+   11  tar -xvf v2.3.5-2.tar 
+   12  ls -lrth
+   13  rm v2.3.5-2.tar 
+   14  cd sratoolkit-2.3.5-2/
+   15  ls
+   16  clear
+   17  ls
+   18  make
+   19  sudo apt-get install make
+   20  make
+   21  sudo apt-get install build-essential
+   22  sudo apt-get update
+   23  sudo apt-get install build-essential
+   24  make clean
+   25  make
+   26  ls
+   27  ls =lrth
+   28  ls -lrth
+   29  cd linux/
+   30  ls -lrht
+   31  cd ../
+   32  ls -lrht
+   33  cd buio
+   34  cd build/
+   35  ls -lrth
+   36  cd ../
+   37  ls -lrth
+   38  cd tools/
+   39  ls
+   40  ls -lrth
+   41  ./sra-dump/
+   42  cd sra-dump/
+   43  ls -lrth
+   44  make
+   45  cd ../
+   46  sudo apt-get install libxml2-dv
+   47  sudo apt-get install libxml2-dev
+   48  make clean
+   49  make
+   50  ls -lrth
+   51  mkdir data
+   52  ls
+   53  mv bin/SRR402443.sra data/.
+   54  ls data/
+   55  ls bin
+   56  ls -lrht
+   57  cd bin/sratoolkit-2.3.5-2/
+   58  ls -lrth
+   59  tools/sra-dump/
+   60  ls -rlth tools/sra-dump/
+   61  ls -lrht
+   62  make
+   63  ls -lrht
+   64  ls -lrth *
+   65  cd tools/
+   66  ls -lrth
+   67  cd sra-dump/
+   68  ls -lrth
+   69  make
+   70  cd ../
+   71  ls -lrht
+   72  c d../
+   73  ls -lrht
+   74  cd ../
+   75  ls -lrth
+   76  perl configuration-assistant.perl 
+   77  ls -lrth
+   78  make
+   79  ls -lrth
+   80  ls -lrth build/
+   81  ls -lrht
+   82  ls -lrth libs
+   83  ls -lrth
+   84  cd ../
+   85  ls -lrth
+   86  ./fastq-dump
+   87  clear
+   88  hi
+   89  ls -lrth
+   90  chmod +x fastq-dump 
+   91  ls -lrth
+   92  ./fastq-dump 
+   93  ./fastq-dump data/SRR402443.sra --split-3
+   94  bg
+   95  ls
+   96  ls -lrth
+   97  cd bin
+   98  wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.2.zip
+   99  unzip fastqc_v0.11.2.zip 
+  100  sudo apt-get install unzip
+  101  ls
+  102  ls -lrth
+  103  cd bin/
+  104  ls -lrth
+  105  cd FastQC/
+  106  ls -lrth
+  107  ls *
+  108  less Configuration/adapter_list.txt 
+  109  ls -lrth
+  110  cd uk/ac/babraham
+  111  ls
+  112  cd FastQC/
+  113  ls
+  114  ls *
+  115  less fastqc
+  116  ls
+  117  cd ../../../
+  118  cd ../
+  119  less fastqc
+  120  perl fastqc ../../SRR402443_1.fastq 
+  121  bg
+  122  cd ../
+  123  ls
+  124  wget http://sourceforge.net/projects/trinityrnaseq/files/trinityrnaseq_r20140717.tar.gz
+  125  gunzip trinityrnaseq_r20140717.tar.gz 
+  126  tar -xvf trinityrnaseq_r20140717.tar 
+  127  ls -lrth
+  128  cd trinityrnaseq_r20140717/
+  129  ls
+  130  make
+  131  sudo apt-get install zlib1g-dev
+  132  make clean
+  133  make
+  134  sudo apt-get install  libncurses5-dev
+  135  make
+  136  clear
+  137  ls -lrht
+  138  cd bin/
+  139  ls -lrth
+  140  unzip fastqc_v0.11.2.zip 
+  141  ls -lrth
+  142  cd ../
+  143  less SRR402443_1.fastq 
+  144  less SRR402443_2.fastq 
+  145  less SRR402443_1.fastq 
+  146  less SRR402443_2.fastq 
+  147  cd bin/
+  148  ls
+  149  cd FastQC/
+  150  ls
+  151  ls -lrht
+  152  less fastqc
+  153  perl fastqc
+  154  sudo apt-get install default-jdk
+  155  ls -lrth
+  156  wc -l SRR402443_1.fastq &
+  157  jobs
+  158  ls -l data/
+  159  ls -lh data/
+  160  ls
+  161  ls -lrth
+  162  nohup perl bin/FastQC/fastqc SRR402443_2.fastq &
+  163  ls
+  164  ls -lrth
+  165  hobs
+  166  jobs
+  167  cd bin/trinityrnaseq_r20140717/
+  168  ls
+  169  ls -lrth trinity-plugins/
+  170  cd trinity-plugins/
+  171  ls -lrth
+  172  java Trimmomatic
+  173  clear
+  174  ls
+  175  cd Trimmomatic-0.32/
+  176  ls
+  177  pwd
+  178  ls -lrth
+  179  ls -lrth adapters/
+  180  less adapters/TruSeq2-PE.fa 
+  181  less adapters/TruSeq3-PE.fa 
+  182  cd ~/
+  183  pwd
+  184  cd data/
+  185  cd ../
+  186  l s-lrth
+  187  ls -lrth
+  188  clear
+  189  ls -lrht
+  190  nohup java -classpath /home/azureuser/bin/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/trimmomatic-0.32.jar org.usadellab.trimmomatic.TrimmomaticPE -threads 2 SRR402443_1.fastq SRR402443_2.fastq Hosta.trimmed_P1.fq Hosta.trimmed_U1.fq Hosta.trimmed_P2.fq Hosta.trimmed_U2.fq ILLUMINACLIP:/home/azureuser/bin/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/adapters/TruSeq2-PE.fa:3:30:10 SLIDINGWINDOW:10:20 MINLEN:40 &
+  191  ls -lrth
+  192  ls
+  193  ls -lrth
+  194  less Hosta.trimmed_P1.fq 
+  195  less Hosta.trimmed_P2.fq 
+  196  ls -lrth
+  197  cd bin/trinityrnaseq_r20140717/
+  198  ls -lrth
+  199  ls util/
+  200  cd util/
+  201  perl insilico_read_normalization.pl 
+  202  perl insilico_read_normalization.pl --seqType fq --JM 10G --max_cov 20 --left ~/Hosta.trimmed_P1.fq --right ~/Hosta.trimmed_P2.fq --single ~/Hosta.trimmed_U1.fq,~/Hosta.trimmed_U2.fq --output /home/azureuser/
+  203  bg
+  204  df -h
+  205  ls -lrth
+  206  cd ~
+  207  ls -lrht
+  208  ls -lrht tmp_normalized_reads/
+  209  df -h
+  210  ls -lrht
+  211  ls -lrht tmp_normalized_reads/
+  212  ls -lrth
+  213  rm *.zip
+  214  rm SRR402443_1.fastq 
+  215  rm SRR402443_2.fastq 
+  216  df -h
+  217  ls -lrth
+  218  jobs
+  219  ls -lrth tmp_normalized_reads/
+  220  ls
+  221  ls -lrth
+  222  ls -lrht
+  223  history
+  224  perl bin/trinityrnaseq_r20140717/util/insilico_read_normalization.pl 
+  225  ls -lrth
+  226  cat Hosta.trimmed_U1.fq Hosta.trimmed_U2.fq > Hosta.trimmed_UF.fq
+  227  history
+  228  perl bin/trinityrnaseq_r20140717/util/insilico_read_normalization.pl --seqType fq --JM 10G --max_cov 20 --left ~/Hosta.trimmed_P1.fq --right ~/Hosta.trimmed_P2.fq --single Hosta.trimmed_UF.fq 
+  229  ls -lrth
+  230  rm -r tmp_normalized_reads/
+  231  perl bin/trinityrnaseq_r20140717/util/insilico_read_normalization.pl --seqType fq --JM 10G --max_cov 20 --left ~/Hosta.trimmed_P1.fq --right ~/Hosta.trimmed_P2.fq --single Hosta.trimmed_UF.fq 
+  232  bg
+  233  ls
+  234  ls -lrth
+  235  ls
+  236  rm -r tmp_normalized_reads/
+  237  ls -lrth
+  238  perl bin/trinityrnaseq_r20140717/util/insilico_read_normalization.pl 
+  239  clear
+  240  ls
+  241  df -h
+  242  nohup perl bin/trinityrnaseq_r20140717/util/insilico_read_normalization.pl --seqType fq --JM 10G --max_cov 20 --left ~/Hosta.trimmed_P1.fq --right ~/Hosta.trimmed_P2.fq &
+  243  ls -lrth
+  244  less nohup.out 
+  245  df -h
+  246  ls -lrht
+  247  jobs
+  248  ls -lrth
+  249  less nohup.out 
+  250  ls -lrth
+  251  nohup /home/mmckain/bin/trinityrnaseq_r20140413/Trinity --seqType fq --group_pairs_distance 600 --JM 10G --left Hosta.trimmed_P1.fq --right Hosta.trimmed_P2.fq --CPU 1 &
+  252  nohup bin/trinityrnaseq_r20140717/Trinity --seqType fq --group_pairs_distance 600 --JM 10G --left Hosta.trimmed_P1.fq --right Hosta.trimmed_P2.fq --CPU 1 &
+  253  ls -lrht
+  254  nohup perl bin/trinityrnaseq_r20140717/Trinity --seqType fq --group_pairs_distance 600 --JM 10G --left Hosta.trimmed_P1.fq --right Hosta.trimmed_P2.fq --CPU 1 --no-bowtie &
+  255  ls
+  256  less nohup.out 
+  257  rm nohup.out 
+  258  nohup perl bin/trinityrnaseq_r20140717/Trinity --seqType fq --group_pairs_distance 600 --JM 10G --left Hosta.trimmed_P1.fq --right Hosta.trimmed_P2.fq --CPU 1 --no-bowtie &
+  259  ls
+  260  ls -lrth
+  261  less nohup.out 
+  262  perl bin/trinityrnaseq_r20140717/Trinity --seqType fq --group_pairs_distance 600 --JM 10G --left Hosta.trimmed_P1.fq --right Hosta.trimmed_P2.fq --CPU 1 &
+  263  perl bin/trinityrnaseq_r20140717/Trinity --seqType fq --group_pairs_distance 600 --JM 10G --left Hosta.trimmed_P1.fq --right Hosta.trimmed_P2.fq --CPU 1ls
+  264  ls
+  265  perl bin/trinityrnaseq_r20140717/Trinity --seqType fq --group_pairs_distance 600 --JM 10G --left Hosta.trimmed_P1.fq --right Hosta.trimmed_P2.fq --CPU 1 --no_bowite &
+  266  clear
+  267  perl bin/trinityrnaseq_r20140717/Trinity --seqType fq --group_pairs_distance 600 --JM 10G --left Hosta.trimmed_P1.fq --right Hosta.trimmed_P2.fq --CPU 1 --no_bowtie &
+  268  ls
+  269  cd trinity_out_dir/
+  270  ls -lrth
+  271  less Trinity.timing 
+  272  ls -lrth
+  273  jobs
+  274  kill %1
+  275  ls
+  276  jobs
+  277  ls -lrth
+  278  perl bin/trinityrnaseq_r20140717/trinity-plugins/TransDecoder_r20140704/TransDecoder
+  279  perl bin/trinityrnaseq_r20140717/trinity-plugins/transdecoder/TransDecoder 
+  280  vi bin/trinityrnaseq_r20140717/trinity-plugins/transdecoder/TransDecoder 
+  281  perl bin/trinityrnaseq_r20140717/trinity-plugins/transdecoder/TransDecoder 
+  282  ls lrth
+  283  ls -lrth
+  284  cd bin
+  285  wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.2.29+-x64-linux.tar.gz
+  286  ls -lrth
+  287  gunzip ncbi-blast-2.2.29+-x64-linux.tar.gz 
+  288  tar -xvf ncbi-blast-2.2.29+-x64-linux.tar 
+  289  ls -lrth
+  290  cd ncbi-blast-2.2.29+/
+  291  ls -lrth
+  292  cd bin
+  293  ls -lrth
+  294  ./makeblastdb
+  295  ./makeblastdb -in ~/Hosta-venusta.trinity.fasta -dbtype nucl
+  296  cd ~
+  297  ls -lrth
+  298  less Hosta-venusta.trinity.fasta
+  299  vi strawberry_knox.fsa
+  300  perl -pi.bak -e 's/\s//g' strawberry_knox.fsa 
+  301  ls -lrth
+  302  less strawberry_knox.fsa
+  303  vi strawberry_knox.fsa
+  304  history > michaels_azure_history.txt
